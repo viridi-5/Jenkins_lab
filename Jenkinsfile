@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Compiling app.cpp into executable pes1ug22am064-1'
                 // This command compiles the C++ file (ensure the file is named app.cpp)
-                sh 'g++ -o pes1ug22am064-1 app.cpp'
+                sh 'g++ -o pes1ug22am064-1 pes1ug22am064.cpp'
             }
         }
         stage('Test') {
