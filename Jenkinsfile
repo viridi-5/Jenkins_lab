@@ -4,21 +4,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Compiling app.cpp into executable YOUR_SRN-1'
+                echo 'Compiling app.cpp into executable pes1ug22am064-1'
                 // This command compiles the C++ file (ensure the file is named app.cpp)
-                sh 'g++ -o YOUR_SRN-1 app.cpp'
+                sh 'g++ -o pes1ug22am064-1 app.cpp'
             }
         }
         stage('Test') {
             steps {
-                echo 'Executing YOUR_SRN-1'
+                echo 'Executing pes1ug22am064-1'
                 // This command runs the compiled binary and prints its output
-                sh './YOUR_SRN-1'
+                sh './pes1ug22am064-1'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying YOUR_SRN-1'
+                echo 'Deploying pes1ug22am064-1'
                 // Simulate a deploy step (customize as needed)
                 sh 'echo "Deployment step completed"'
             }
