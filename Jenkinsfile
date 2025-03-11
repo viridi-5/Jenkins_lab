@@ -4,35 +4,30 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    // Compile the .cpp file using a shell script
-                    sh 'g++ -o pes1ug22am064-1 hello.cpp'
-                }
+                echo 'Compiling app.cpp into executable YOUR_SRN-1'
+                // This command compiles the C++ file (ensure the file is named app.cpp)
+                sh 'g++ -o YOUR_SRN-1 app.cpp'
             }
         }
-
         stage('Test') {
             steps {
-                script {
-                    // Print output of the compiled .cpp file
-                    sh './pes1ug22am064-1'
-                }
+                echo 'Executing YOUR_SRN-1'
+                // This command runs the compiled binary and prints its output
+                sh './YOUR_SRN-1'
             }
         }
-
         stage('Deploy') {
             steps {
-                script {
-                    // Deployment steps, if any (e.g., pushing to a server, etc.)
-                    echo 'Deploying application...'
-                }
+                echo 'Deploying YOUR_SRN-1'
+                // Simulate a deploy step (customize as needed)
+                sh 'echo "Deployment step completed"'
             }
         }
     }
 
     post {
         failure {
-            echo 'Pipeline failed'
+            echo 'pipeline failed'
         }
     }
 }
